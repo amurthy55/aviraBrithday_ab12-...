@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Remaining</title>
+    <script>
+        function calculateDaysRemaining() {
+            const targetDate = new Date('2026-06-19');
+            const today = new Date();
+            const timeDifference = targetDate - today;
+            const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+            document.getElementById('days').innerText = daysRemaining > 0 ? daysRemaining : 0;
+        }
+        window.onload = calculateDaysRemaining;
+    </script>
+</head>
+<body>
+    <h1>Days Remaining to 19th June 2026</h1>
+    <p id="days"></p>
+</body>
+</html>
